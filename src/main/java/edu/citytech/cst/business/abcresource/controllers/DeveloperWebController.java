@@ -26,9 +26,8 @@ public class DeveloperWebController {
         return new ResponseEntity<>(info ,HttpStatus.OK);
     }
 
-    @PostMapping("{name}")
+    @GetMapping("{name}")
     public ResponseEntity<String> greeting(@PathVariable(name = "name") String name) {
         return new ResponseEntity<>("Hello " + name + ", How are you?", HttpStatus.OK);
     }
-
 }
